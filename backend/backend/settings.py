@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from django.core.wsgi import get_wsgi_application
 
 load_dotenv()
 
@@ -55,6 +56,9 @@ TEMPLATES = [
         },
     },
 ]
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.settings")
+application = get_wsgi_application()
 
 # CORS
 CORS_ALLOWED_ORIGINS = ["http://localhost:5173"]
