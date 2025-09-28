@@ -1,0 +1,23 @@
+# Core
+Django>=4.2,<4.3
+djangorestframework>=3.16,<4
+
+# JWT Authentication
+djangorestframework-simplejwt>=5.5,<6
+PyJWT>=2.8,<3
+
+# Database
+psycopg2-binary>=2.9,<3
+
+# Utilities
+python-dotenv>=1.0,<2
+pytz>=2023.3,<2024
+asgiref>=3.7,<4
+
+# CORS
+django-cors-headers>=4.0,<5
+
+# SQL parsing
+sqlparse>=0.4.4,<0.5
+
+gunicorn
