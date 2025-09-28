@@ -61,7 +61,10 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.settings")
 application = get_wsgi_application()
 
 # CORS
-CORS_ALLOWED_ORIGINS = ["http://localhost:5173"]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # local dev
+    "https://clicker-game-frontend.onrender.com",  # deployed frontend
+]
 CORS_ALLOW_CREDENTIALS = True
 
 # REST Framework + JWT
