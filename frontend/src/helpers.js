@@ -8,7 +8,7 @@ export async function refreshToken () {
     if (!refresh) return null;
 
     try {
-        const res = await fetch("http://127.0.0.1:8000/api/token/refresh/", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/token/refresh/`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({ refresh })
@@ -26,7 +26,7 @@ export async function refreshToken () {
 
 export async function patchProfile(token, content) {
     try {
-        const res = await fetch("http://127.0.0.1:8000/api/profile/", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/profile/`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -53,7 +53,7 @@ export async function patchProfile(token, content) {
 }
 
 export async function fetchProfile(token) {
-    let res = await fetch("http://127.0.0.1:8000/api/profile/", {
+    let res = await fetch(`${import.meta.env.VITE_API_URL}/api/profile/`, {
         headers: {
             "Authorization": `Bearer ${token}`
         }
